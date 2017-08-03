@@ -2,26 +2,5 @@
   <h2>编辑讨论版</h2>
 
   <hr>
-  <%= form_for @group do |f| %>
-
-    <% if @group.errors.any? %>
-      <% @group.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    <% end %>
-
-    <div class="form-group">
-      <%= f.label "标题" %>
-      <%= f.text_field :title, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label "叙述" %>
-      <%= f.text_area :description, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.submit "Submit", disable_with: "Submitting", class: "btn btn-primary"%>
-    </div>
-  <% end %>
+  <%= render "form" %>
 </div>
