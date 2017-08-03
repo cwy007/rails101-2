@@ -1,7 +1,9 @@
 <div class="col-md-8 col-md-offset-2">
-  <div class="group">
-    <%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary pull-right") %>
-  </div>
+  <% if @group.user == current_user %>
+    <div class="group">
+      <%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary pull-right") %>
+    </div>
+  <% end %>
 
   <h2><%= @group.title %></h2>
   <p><%= @group.description %></p>
