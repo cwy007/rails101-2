@@ -17,7 +17,7 @@
     <%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary pull-right") %>
     <% end %>
   </div>
-  
+
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
 
@@ -35,7 +35,7 @@
         <tbody>
           <% @posts.each do |post| %>
           <tr>
-            <td><%= post.content %></td>
+            <td><%= simple_format(post.content) %></td>
             <td><%= post.user.email %></td>
             <td><%= post.created_at.to_s(:long) %></td>
           </tr>
