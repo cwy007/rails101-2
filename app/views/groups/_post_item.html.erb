@@ -1,0 +1,5 @@
+<tr>
+  <td><%= simple_format(post.content) %></td>
+  <td><%= post.user.email %></td>
+  <td><%= post.created_at.to_s(:long) %></td>
+</tr>
