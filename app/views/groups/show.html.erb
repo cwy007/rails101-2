@@ -38,8 +38,8 @@
         </tbody>
       </table>
 
-      <div class="text-center digg_pagination">
-        <%= will_paginate @posts %>
+      <div class="digg_pagination" id="group_show_pagination">
+        <%= will_paginate @posts, :page_links => false, :container => false %>
       </div>
 
     <!-- </div>
