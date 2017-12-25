@@ -11,8 +11,8 @@
 puts "新建一名 user"
 User.delete_all
 User.create(email: "chanweiyan007@gmail.com",
-            password: "12345678",
-            password_confirmation: "12345678")
+            password: "123456",
+            password_confirmation: "123456")
 
 puts "新增10个group"
 Group.delete_all
